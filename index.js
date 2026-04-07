@@ -25,3 +25,33 @@ document.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+
+const progressFill = document.querySelector('.progress-fill');
+let progress = 0;
+
+function fillProgressBar() {
+    progressFill.style.width = '0%';
+    progress = 0;
+    
+    const totalDuration = 3000;
+    const interval = 16; // 60 FPS
+    const step = 100 / (totalDuration / interval);
+
+    const timer = setInterval(() => {
+        progress += step;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(timer);
+        }
+        progressFill.style.width = progress + '%';
+        
+      
+        const barWidth = progressFill.parentElement.offsetWidth;
+        document.querySelector('.progress-text-white').style.width = barWidth + 'px';
+    }, interval);
+}
+
+btnOpen.addEventListener('click', () => {
+    fillProgressBar();
+});

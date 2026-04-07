@@ -35,7 +35,7 @@ function fillProgressBar() {
     progress = 0;
     
     const totalDuration = 3000;
-    const interval = 16; // 60 FPS
+    const interval = 16;
     const step = 100 / (totalDuration / interval);
 
     const timer = setInterval(() => {

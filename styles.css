@@ -96,7 +96,6 @@
     margin-top: 0.75rem;
 }
 
-/* ── Close button ── */
 .btn-close {
     position: absolute;
     top: 1rem;
@@ -117,4 +116,53 @@
 .btn-close:hover {
     background: #f0f0f0;
     color: #111;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #d3d3d3;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.progress-text-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 1;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #e74c3c;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.progress-text-white {
+    width: 640px; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
